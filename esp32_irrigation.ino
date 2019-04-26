@@ -76,8 +76,8 @@ void setup(){
       int sensorValue = (3800 - analogRead(A0)) / 18;
       sensorValue;
       snprintf (msg, sizeof(msg), "%ld", sensorValue);
-      client.publish("esp/erde/lolin/", msg);
-      Serial.print("Erdfeuchtigkeit: ");
+      client.publish("esp/earth/", msg);
+      Serial.print("Soil Moisuture: ");
       Serial.print(msg);
       Serial.println(" %");
  // }
@@ -95,8 +95,8 @@ void setup(){
       int cm = 30 - duration * 0.01715; // (duration / 58.2)
       cm;
       snprintf (dst, sizeof(dst), "%ld", cm);
-      client.publish("esp/wasser/lolin/", dst);
-      Serial.print("Wassertank: ");
+      client.publish("esp/water/", dst);
+      Serial.print("Cistern Level: ");
       Serial.print(cm);
       Serial.println(" cm");
       delay(1000);
@@ -104,7 +104,7 @@ void setup(){
 
   //delay(1000); 
 
-  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  Serial.println("ESP32 goes to sleep for " + String(TIME_TO_SLEEP) +
   " Seconds");
 
   /*
