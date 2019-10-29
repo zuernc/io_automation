@@ -8,8 +8,8 @@ const char* ssid = "***";
 const char* password =  "***";
 const char* mqttServer = "192.168.1.1";
 const int mqttPort = 1883;
-const char* mqttUser = "DVES_USER";
-const char* mqttPassword = "DVES_PASS";
+const char* mqttUser = "***";
+const char* mqttPassword = "***";
 
 long lastMsg1 = 0;
 long lastMsg2 = 0;
